@@ -1,13 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
+import ItemListContainer from './container/ItemListContainer';
 
 function App() {
   return (
-    <div>
-    <h1>Desafío Nº 1</h1>
-    <h2>Entrega del primer desafío del curso de React</h2>
-    <p>Renzo Curto</p>
-    </div>
+    <>
+    <NavBar></NavBar>
+
+    <ItemListContainer mensajeBoton='PRÓXIMAMENTE' mensajeLabel='Acá vas a encontrar nuestro catálogo'></ItemListContainer>
+
+
+
+    </>
   );
 }
 
