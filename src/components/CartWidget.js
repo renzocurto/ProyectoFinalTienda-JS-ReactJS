@@ -1,4 +1,3 @@
-/* Del código sacado de la pagina daisyUI, coloqué en la función CartWidget el código correspondiente al símbolo del carrito de compras */
 
 const CartWidget = () => {
   return (

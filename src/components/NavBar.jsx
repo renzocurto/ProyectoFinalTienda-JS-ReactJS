@@ -18,11 +18,11 @@ const NavBar = () => {
     </div>
   </div>
   <div class="navbar-center">
-    <a class="btn btn-ghost normal-case text-xl">Desafío Nº 2</a>
+    <a class="btn btn-ghost normal-case text-xl">Desafío Nº 3</a>
   </div>
   <div class="navbar-end">
 
-    <CartWidget></CartWidget>
+    <CartWidget/>
     
     <div class="dropdown dropdown-end">
       <label tabindex="0" class="btn btn-ghost btn-circle avatar">
