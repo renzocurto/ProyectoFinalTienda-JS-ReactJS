@@ -1,35 +1,9 @@
-import { useEffect, useState } from "react";
 import ItemCard from "./ItemCard"
-import {itemsData} from "./Items"
 
+const ItemList = ({items}) => {
 
-
-const ItemList = () => {
-
-    
-
-        const [items, setItems] = useState([])
-
-        useEffect(() => {
-          const getItems = new Promise ((resolve, reject) => {
-
-            setTimeout ( () => {
-                
-                resolve(itemsData)
-
-            }, 2000)
-          })
-
-          getItems.then ((result) => {
-
-            setItems(result)
-          })
-        
-
-        
-    }, [])
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-3 gap-3 justify-items-center">
         {items.map (item => <ItemCard key = {item.id} items = {item}/>)}
 
     </div>
