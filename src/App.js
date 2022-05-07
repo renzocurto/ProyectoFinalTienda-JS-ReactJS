@@ -7,15 +7,7 @@ function App() {
   return (
     <>
     <NavBar/>
-
-    
-    
     <ItemListContainer/>
-    
-    
-
-
-
     </>
   );
 }
