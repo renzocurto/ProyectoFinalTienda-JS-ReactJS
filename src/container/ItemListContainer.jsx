@@ -1,18 +1,28 @@
 import { useEffect, useState } from "react";
 import {itemsData} from "../components/Items";
 import ItemList from "../components/ItemList";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   
   
   const [items, setItems] = useState([])
 
+  const {catId} = useParams()
+
   useEffect(() => {
     const getItems = new Promise ((resolve, reject) => {
 
       setTimeout ( () => {
+
+          const myCategory = catId 
           
-          resolve(itemsData)
+            ? itemsData.filter((itemsData) => itemsData.category === catId) 
+            : itemsData;
+
+
+          
+          resolve(myCategory)
 
       }, 2000)
     })
@@ -24,7 +34,7 @@ const ItemListContainer = () => {
   
 
   
-}, [])
+}, [catId])
 return (
 
     ItemList({items})
