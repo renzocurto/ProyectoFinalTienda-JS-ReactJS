@@ -1,6 +1,7 @@
 const ItemDetail = ({item}) => {
   return (
-    <div class="card m:card-side bg-base-100 shadow-xl">
+
+<div class="card m:card-side bg-base-100 shadow-xl">
   <figure><img src={item.pictureUrl} alt="fotoItem"/></figure>
   <div class="card-body">
     <h2 class="card-title justify-center">{item.title}</h2>
@@ -10,6 +11,10 @@ const ItemDetail = ({item}) => {
     </div>
   </div>
 </div>
+
+      
+
   )
 }
+
 export default ItemDetail

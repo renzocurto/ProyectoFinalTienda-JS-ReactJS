@@ -26,7 +26,11 @@ const ItemsDetailContainer = () => {
             setItem(result)
         })
         
+
     },[itemId])
+
+    
+
 
 
 
