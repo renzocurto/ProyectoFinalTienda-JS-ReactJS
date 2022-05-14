@@ -37,7 +37,7 @@ const ItemListContainer = () => {
 }, [catId])
 return (
 
-    ItemList({items})
+  ItemList({items})
 
 )
 }
