@@ -21,13 +21,13 @@ const ItemDetail = ({item}) => {
           <button class="btn">{item.price}</button>
         </div>
         <div class="card-actions justify-center">
-        <div class="form-control">
-      </div>
-          {terminar ? 
-            (<Link to = '/cart' class="btn btn-primary" >Terminar compra</Link>)
-            :
-            (<ItemCount stock={item.stock} onAdd={onAdd} />)}
-          
+          <div class="form-control">
+          </div>
+            {terminar ? 
+              (<Link to = '/cart' class="btn btn-primary" >Terminar compra</Link>)
+              :
+              (<ItemCount stock={item.stock} onAdd={onAdd} />)}
+            
         </div>
       </div>
     </div>

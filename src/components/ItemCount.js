@@ -27,12 +27,7 @@ import React, { useState } from "react"
  					</button>
  				</div>
  				<div>
- 					<button
- 						className="btn bg-primary text-white btn-block "
- 						onClick={() => onAdd(count)}
- 					>
- 						Comprar
- 					</button>
+ 					<button className="btn bg-primary text-white btn-block " onClick={() => onAdd(count)}>Comprar</button>
  				</div>
  			</div>
  		</>
