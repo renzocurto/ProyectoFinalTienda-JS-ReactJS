@@ -26,16 +26,13 @@ const ItemsDetailContainer = () => {
             setItem(result)
         })
         
-
     },[itemId])
 
-    
-
-
-
-
   return (
+
     ItemDetail({item})
+
   )
 }
+
 export default ItemsDetailContainer
