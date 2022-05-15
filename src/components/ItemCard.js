@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import CartContextProvider from "../context/CartContext"
+import CartList from "../context/CartList"
 
 const ItemCard = ({items}) => {
   

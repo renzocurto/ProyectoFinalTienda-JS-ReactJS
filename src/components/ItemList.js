@@ -1,9 +1,15 @@
+import CartContextProvider from "../context/CartContext"
+import CartList from "../context/CartList"
 import ItemCard from "./ItemCard"
 
 const ItemList = ({items}) => {
 
   return (
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> Desafio5
     <div className="grid grid-cols-3 gap-3 justify-items-center">
         {items.map (item => <ItemCard key = {item.id} items = {item}/>)}
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import ItemCount from "./ItemCount"
@@ -12,6 +13,27 @@ const ItemDetail = ({item}) => {
   const [terminar, setTerminar] = useState (false)
 
   return (
+=======
+import { useContext } from "react"
+import CartContextProvider, { CartContext } from "../context/CartContext"
+import CartList from "../context/CartList"
+import ItemCount from "./ItemCount"
+import ItemList from "./ItemList"
+
+const ItemDetail = ({item}) => {
+
+  const cantidad = document.querySelector("#cantItem")
+
+  const {addToCart} = useContext(CartContext)
+
+  const onAdd = (count) => {
+    console.log(count)
+  }
+
+  return (
+    <>
+    <CartList/>
+>>>>>>> Desafio5
     <div class="card m:card-side bg-base-100 shadow-xl">
       <figure><img src={item.pictureUrl} alt="fotoItem"/></figure>
       <div class="card-body">
@@ -21,6 +43,7 @@ const ItemDetail = ({item}) => {
           <button class="btn">{item.price}</button>
         </div>
         <div class="card-actions justify-center">
+<<<<<<< HEAD
           <div class="form-control">
           </div>
             {terminar ? 
@@ -31,6 +54,15 @@ const ItemDetail = ({item}) => {
         </div>
       </div>
     </div>
+=======
+        <div class="form-control">
+        </div>
+          <ItemCount stock={item.stock} onAdd={onAdd} />
+        </div>
+      </div>
+    </div>
+    </>
+>>>>>>> Desafio5
   )
 }
 
