@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   
-  
   const [items, setItems] = useState([])
 
   const {catId} = useParams()
@@ -19,8 +18,6 @@ const ItemListContainer = () => {
           
             ? itemsData.filter((itemsData) => itemsData.category === catId) 
             : itemsData;
-
-
           
           resolve(myCategory)
 
@@ -32,13 +29,9 @@ const ItemListContainer = () => {
       setItems(result)
     })
   
-
-  
 }, [catId])
 return (
-
   ItemList({items})
-
 )
 }
 export default ItemListContainer

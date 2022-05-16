@@ -1,6 +1,7 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import AppContextProvider from './components/AppContext';
 import Cart from './components/Cart';
 import ItemsDetailContainer from './components/ItemsDetailContainer';
 import NavBar from './components/NavBar';
@@ -9,56 +10,25 @@ import CartContextProvider from './context/CartContext';
 
 export default function App() {
   return (
-<<<<<<< HEAD
-  <CartContextProvider>
-=======
-<<<<<<< HEAD
-=======
-  <CartContextProvider>
->>>>>>> Desafio5
->>>>>>> refs/remotes/origin/master
 
-    <BrowserRouter>
     
-        <NavBar/>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> refs/remotes/origin/master
+    <AppContextProvider>
+      <CartContextProvider>
+        <BrowserRouter>
+            <NavBar/>
+            <Routes>
 
-        <Routes>
+              <Route path = '/' element ={<ItemListContainer/>}/>
 
-          <Route path = '/' element ={<ItemListContainer/>}/>
+              <Route path='/item/:itemId' element={<ItemsDetailContainer/>}/>
 
-          <Route path='/item/:itemId' element={<ItemsDetailContainer/>}/>
+              <Route path='/category/:catId' element={<ItemListContainer/>}/>
 
-          <Route path='/category/:catId' element={<ItemListContainer/>}/>
-<<<<<<< HEAD
-=======
+              <Route path='/cart' element={<Cart/>}/>
 
-          <Route path='/cart' element={<Cart/>}/>
-=======
-
-        <Routes>
-
-          <Route path = '/' element ={<ItemListContainer/>}/>
-
-          <Route path='/item/:itemId' element={<ItemsDetailContainer/>}/>
-
-          <Route path='/category/:catId' element={<ItemListContainer/>}/>
->>>>>>> refs/remotes/origin/master
-
-        </Routes>
-
-    </BrowserRouter>
-
-  </CartContextProvider>
-    );
-}
->>>>>>> Desafio5
-
-        </Routes>
-
-    </BrowserRouter>
+            </Routes>
+        </BrowserRouter>
+      </CartContextProvider>
+    </AppContextProvider>
     );
 }

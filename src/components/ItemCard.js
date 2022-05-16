@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom"
-import CartContextProvider from "../context/CartContext"
-import CartList from "../context/CartList"
 
 const ItemCard = ({items}) => {
   
   return (
-
     <div class="card w-96 bg-base-100 shadow-xl justify-center">
       <figure class="px-10 pt-10">
       <img src={items.pictureUrl} alt="Shoes" class="rounded-xl" />
@@ -18,8 +15,6 @@ const ItemCard = ({items}) => {
         </div>
       </div>
     </div>
-
   )
 }
-
 export default ItemCard
