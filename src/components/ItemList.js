@@ -5,7 +5,15 @@ import ItemCard from "./ItemCard"
 const ItemList = ({items}) => {
 
   return (
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> Desafio5
+>>>>>>> refs/remotes/origin/master
     <div className="grid grid-cols-3 gap-3 justify-items-center">
         {items.map (item => <ItemCard key = {item.id} items = {item}/>)}
 
