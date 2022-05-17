@@ -1,14 +1,12 @@
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
-const CartContext = createContext ({
+export const CartContext = createContext ({
     cart: [],
     addToCart: () => {},
     isInCart: () => {},
 
 })
-
-export const useCartContext = () => useContext(CartContext)
 
 export const CartContextProvider = ( {children} ) => {
 
@@ -24,7 +22,7 @@ export const CartContextProvider = ( {children} ) => {
 
         if (itemEnCart) {
 
-            newCart[newCart.findIndex ((item) => item.id === itemEnCart.id)].quanity += cant
+            newCart[newCart.findIndex ((items) => items.id === itemEnCart.id)].quantity += cant
 
             setCart (newCart)
 
@@ -41,7 +39,7 @@ export const CartContextProvider = ( {children} ) => {
     
     return (
 
-    <CartContext.Provider value = { { cart, addToCart, isInCart, setCart }} >
+    <CartContext.Provider value = {  {cart, addToCart, isInCart, setCart} } >
         {children}
     </CartContext.Provider>
     

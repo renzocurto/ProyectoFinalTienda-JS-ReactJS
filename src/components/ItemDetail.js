@@ -1,16 +1,21 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 import ItemCount from "./ItemCount"
+import { CartContext } from "../context/CartContext"
 
 const ItemDetail = ({item}) => {
 
-  const onAdd = (count) => {
-    setTerminar(true)
-    console.log(count)
-  }
-
   const [terminar, setTerminar] = useState (false)
 
+  const {addToCart} = useContext(CartContext)
+
+  const onAdd = (count) => {
+    
+    setTerminar(true)
+    console.log(count, item.title)
+    addToCart(item,count) 
+  }
+  
   return (
     <>
     <div class="card m:card-side bg-base-100 shadow-xl">
@@ -24,9 +29,9 @@ const ItemDetail = ({item}) => {
         <div class="card-actions justify-center">
           <div class="form-control">
             {terminar ? 
-              (<Link to = '/cart' class="btn btn-primary" >Terminar compra</Link>)
+              (<Link to = '/cart' class="btn btn-primary">Terminar compra</Link>)
               :
-              (<ItemCount stock={item.stock} onAdd={onAdd} id= {item.id} />)}
+              (<ItemCount stock={item.stock} onAdd={onAdd} id = {item.id} />)}
             
           </div>
         </div>
