@@ -8,8 +8,6 @@ export const CartContext = createContext ({
     deleteItem: () => {},
     quantityCart: () => {},
     totalCart: () => {}
-
-
 })
 
 export const CartContextProvider = ( {children} ) => {
@@ -75,8 +73,6 @@ export const CartContextProvider = ( {children} ) => {
         })
         return total
     }
-
-    console.log(cart)
     
     return (
 

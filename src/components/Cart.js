@@ -1,5 +1,5 @@
 
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { Link } from "react-router-dom"
 import {CartContext} from "../context/CartContext"
 import CartItem from "./CartItem"
@@ -16,7 +16,7 @@ const Cart = () => {
     <>
     <div class="overflow-x-auto w-full">
     <table class="table w-full">
-       {/* head  */}
+ 
       <thead>
         <tr>
           <th className="text-center">Cantidad</th>

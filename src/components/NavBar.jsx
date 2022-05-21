@@ -33,7 +33,7 @@ const NavBar = () => {
         </div>
       </div>
       <div class="navbar-center">
-        <Link to='/' class="btn btn-ghost normal-case text-xl">Desafío Nº 6 - Sincronizar Counter</Link>
+        <Link to='/' class="btn btn-ghost normal-case text-xl">Desafío Nº 8 - Item Collection</Link>
       </div>
       <div class="navbar-end">
 
