@@ -19,7 +19,7 @@ const ItemsDetailContainer = () => {
 
                 resolve (itemData)
                 
-            }, 2000);
+            }, 1);
 
         })
         getItems.then((result) => {

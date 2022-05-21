@@ -1,7 +1,14 @@
+import { useContext } from "react"
 import { Link, NavLink } from "react-router-dom"
+import { CartContext } from "../context/CartContext"
 import CartWidget from "./CartWidget"
 
 const NavBar = () => {
+
+  const { quantityCart } = useContext(CartContext)
+
+  let quantity = quantityCart()
+
   return (
   <div>
     <div class="navbar bg-base-100">
@@ -30,7 +37,11 @@ const NavBar = () => {
       </div>
       <div class="navbar-end">
 
-        <CartWidget/>
+        {quantity ?
+          <CartWidget/>
+          :
+          <></>
+        }
         
         <div class="dropdown dropdown-end">
           <label tabindex="0" class="btn btn-ghost btn-circle avatar">

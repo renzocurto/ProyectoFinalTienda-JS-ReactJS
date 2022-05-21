@@ -21,7 +21,7 @@ const ItemListContainer = () => {
           
           resolve(myCategory)
 
-      }, 2000)
+      }, 1)
     })
 
     getItems.then ((result) => {
