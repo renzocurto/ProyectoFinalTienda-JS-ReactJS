@@ -6,7 +6,7 @@ import CartItem from "./CartItem"
 
 const Cart = () => {
 
-  const {cart, quantityCart, totalCart} = useContext(CartContext)
+  const {cart, quantityCart, totalCart, deleteCart} = useContext(CartContext)
 
   let quantity = quantityCart()
 
@@ -14,15 +14,14 @@ const Cart = () => {
     <>
     {quantity ?
     <>
-    <div class="overflow-x-auto w-full">
-    <table class="table w-full">
+    <div className=" md-flex flex-wrap justify-center overflow-x-auto w-full">
+    <table className="table w-full ">
  
       <thead>
         <tr>
           <th className="text-center">Cantidad</th>
           <th className="text-center">Ítem</th>
           <th className="text-center">Precio</th>
-          <th className="text-center">Total ítem</th>
           <th className="text-center"></th>
         </tr>
       </thead>
@@ -34,31 +33,34 @@ const Cart = () => {
         <tr>
             <th className="text-center"></th>
             <th className="text-center"></th>
-            <th className="text-center"></th>
-            <th className="text-center"></th>
             <th className="text-center text-bold">Total: $ {totalCart()} </th>
+            <th className="text-center"></th>
           </tr>
       </tfoot>
     </table>
   </div>
+
+
   
-    <div class="justify-items-center">
-      <Link to='/' className="btn justify-items-center">Agregar más ítems</Link>
+    <div className=" md-flex flex justify-center">
+      <Link to='/' className="btn justify-items-center">Catálogo</Link>
+      <Link to='/checkout' className="btn justify-items-center ml-5">Comprar carrito</Link>
+      <button className="btn justify-items-center ml-5" onClick={deleteCart}>Borrar carrito</button>
     </div>
     </>
     :
-    <div className="justify-items-center">
-      <div class="alert shadow-lg justify-center">
-        <div className="justify-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    <div className=" md-flex justify-items-center">
+      <div className=" md-flex alert shadow-lg justify-center">
+        <div className=" md-flex justify-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-info flex-shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
           <div>
-            <h3 class="font-bold">Carrito vacío</h3>
+            <h3 className="font-bold ">Carrito vacío</h3>
           </div>
         </div>
       </div>
-      <div className="mt-5">
-        <Link to='/' className="btn">Ir al catálogo</Link>
+      <div className=" md-flex flex justify-center">
+        <Link to='/' className="btn mt-5 w-1/4">Catálogo</Link>
       </div>
     </div>
   }

@@ -3,15 +3,16 @@ import { Link } from "react-router-dom"
 const ItemCard = ({items}) => {
   
   return (
-    <div class="card w-96 bg-base-100 shadow-xl justify-center">
-      <figure class="px-10 pt-10">
-      <img src={items.pictureUrl} alt="Shoes" class="rounded-xl" />
+    <div className=" md-flex card  bg-base-100 shadow-2xl justify-center sm: w-3/4 md: w-3/4 lg:w-5/6">
+      <figure className="px-10 pt-10">
+      <img src={items.pictureUrl} alt="foto" className="rounded-xl " />
       </figure>
-      <div class="card-body items-center text-center">
-        <h2 class="card-title">{items.title}</h2>
+      <div className=" md-flex card-body items-center text-center">
+        <h2 className="card-title">{items.title}
+        </h2>
         <p>${items.price}</p>
-        <div class="card-actions">
-          <Link to ={items.adress}><button class="btn btn-primary">Ver</button></Link>
+        <div className=" md-flex card-actions">
+          <Link to ={items.adress}><button className="btn btn-primary">Ver</button></Link>
         </div>
       </div>
     </div>

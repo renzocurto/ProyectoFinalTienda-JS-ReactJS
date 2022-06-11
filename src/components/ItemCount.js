@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
  const ItemCount = ({ stock, onAdd, id }) => {
- 	const [count, setCount] = useState(0)
+ 	const [count, setCount] = useState(1)
 
  	const itemAdd = () => {
 
@@ -12,14 +12,14 @@ import React, { useState } from "react"
 
  	const itemRemove = () => {
 
- 		if (count > 0) {
+ 		if (count > 1) {
  			setCount(count - 1)
  		}
  	}
 
  	return (
- 			<div className="flex gap-4 mt-4">
- 				<div className="flex flex-row">
+ 			<div className=" md-flex flex gap-4 mt-4 ">
+ 				<div className=" md-flex flex flex-row">
 					<button className="btn btn-circle" onClick={itemRemove}>
  						<i className="fas fa-minus">-</i>
  					</button>
@@ -28,8 +28,10 @@ import React, { useState } from "react"
  					<button className="btn btn-circle" onClick={itemAdd}>
  						<i className="fas fa-plus">+</i>
  					</button>
+				<div className=" md-flex flex flex-row w-3/4 ml-5">
+ 					<button className="btn bg-primary text-white btn-block" onClick={() => onAdd(count)}>Agregar</button>
+				</div>
  				</div>
- 					<button className="btn bg-primary text-white btn-block " onClick={() => onAdd(count)}>Agregar al carrito</button>
  			</div>
  	)
  }

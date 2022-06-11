@@ -18,15 +18,14 @@ const ItemsDetailContainer = () => {
         getDoc(itemDetail).then((snapshot) => {
 
             setItems({'id': snapshot.id, ...snapshot.data()})
-    
-        })
 
+        })
+ 
     },[itemId])
 
     return (
-
+        
         ItemDetail({items})
-
   )
 }
 export default ItemsDetailContainer

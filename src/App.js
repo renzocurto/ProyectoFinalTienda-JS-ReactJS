@@ -1,13 +1,13 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-
 import Cart from './components/Cart';
 import ItemsDetailContainer from './components/ItemsDetailContainer';
 import NavBar from './components/NavBar';
 import ItemListContainer from './container/ItemListContainer';
 import CartContextProvider from './context/CartContext';
 import CategoryListContainer from './container/CategoryListContainer'
+import Checkout from './components/Checkout';
 
 
 export default function App() {
@@ -27,6 +27,8 @@ export default function App() {
               <Route path='/category/:catId' element={<CategoryListContainer/>}/>
 
               <Route path='/cart' element={<Cart/>}/>
+
+              <Route path='/checkout' element={<Checkout/>}/>
 
             </Routes>
         </BrowserRouter>

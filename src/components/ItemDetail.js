@@ -12,26 +12,25 @@ const ItemDetail = ({items}) => {
   const onAdd = (count) => {
     
     setTerminar(true)
-    console.log(count, items.title)
     addToCart(items,count) 
   }
   
   return (
     <>
-    <div class="card m:card-side bg-base-100 shadow-xl">
+    <div className=" md-flex card m:card-side bg-base-100 shadow-xl">
       <figure><img src={items.pictureUrl} alt="fotoItem"/></figure>
-      <div class="card-body">
-        <h2 class="card-title justify-center">{items.title}</h2>
-        <p class="items-center text-center">{items.description}</p>
-        <div class="card-actions justify-center">
-          <button class="btn">${items.price}</button>
+      <div className=" md-flex card-body">
+        <h2 className="card-title justify-center">{items.title}</h2>
+        <p className="items-center text-center">{items.description}</p>
+        <div className=" md-flex card-actions justify-center">
+          <button className="btn">${items.price}</button>
         </div>
-        <div class="card-actions justify-center">
-          <div class="form-control">
+        <div className=" md-flex card-actions justify-center">
+          <div className=" md-flex form-control">
             {terminar ? 
               (<>
-              <Link to = '/' class="btn btn-primary mb-2">Volver al catálogo</Link>
-              <Link to = '/cart' class="btn btn-primary">Terminar compra</Link>
+              <Link to = '/' className="btn btn-primary mb-2">Volver al catálogo</Link>
+              <Link to = '/cart' className="btn btn-primary">Terminar compra</Link>
               </>)
               :
               (<ItemCount stock={items.stock} onAdd={onAdd} id = {items.id} />)}
